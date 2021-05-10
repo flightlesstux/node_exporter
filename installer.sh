@@ -33,7 +33,7 @@ Documentation=https://github.com/flightlesstux/node_exporter
 [Service]
 Restart=always
 User=$USER
-Gorup=$USER
+Group=$USER
 EnvironmentFile=/opt/$NAME/env
 ExecStart=/opt/$NAME/bin \$ARGS
 ExecReload=/bin/kill -HUP $MAINPID

@@ -176,11 +176,10 @@ ARGS=""
 EOF
 
 adduser -r -d /opt/$NAME $USER -s /sbin/nologin
-chown -R $USER:$USER /opt/node_exporter
+chown -R $USER:$USER /opt/$NAME
 
 systemctl enable $NAME
 systemctl start $NAME
 systemctl status $NAME
 rm -rf /tmp/$NAME-*
-
 
